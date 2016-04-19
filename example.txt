@@ -1,0 +1,6 @@
+//Example File Config
+
+//Video Config
+width = 1024
+height = 720
+mode = fullscreen
