@@ -26,6 +26,6 @@ string read_variable(string path, string variable_name)
 Read a variable in the file and return its value.
 <br><br>
 
-##Instalation
+##Installation
 Copy the files "file.h" and "file.cpp" for your project and include the file "file.h".
 The file "main.cpp" and "example.txt" is an example of how to use the functions.
