@@ -6,11 +6,11 @@ int clone_file(const string &path, const string &path_clone)
 {
     //Open file
     ifstream FILE;
-	FILE.open(path.c_str(), std::ios::in);
+    FILE.open(path.c_str(), std::ios::in);
 
     //error
-	if (FILE.is_open() == false)
-        return -1;
+    if (FILE.is_open() == false)
+    	return -1;
 
 
 	//Create temp file
@@ -21,16 +21,16 @@ int clone_file(const string &path, const string &path_clone)
 	//copy file original for temp
 	while (FILE.eof() == false)
 	{
-        string line = "";
-        getline(FILE, line);
-
-
-        //if not end then insert charactere '\n'
-        if (FILE.eof() == false)
-            FILE_CLONE << line << endl;
-
-        else
-            FILE_CLONE << line;
+		string line = "";
+		getline(FILE, line);
+		
+		
+		//if not end then insert charactere '\n'
+		if (FILE.eof() == false)
+		    FILE_CLONE << line << endl;
+		
+		else
+		    FILE_CLONE << line;
 	}
 
 
@@ -51,7 +51,7 @@ int write_comment(string path, int n_line, string comment)
     ///if comment in last line
     if (n_line <= 0)
     {
-        FILE.open(path.c_str(), std::ios::out | std::ios::app);
+	FILE.open(path.c_str(), std::ios::out | std::ios::app);
         //error
         if (FILE.is_open() == false)
             return -1;
@@ -125,7 +125,7 @@ int write_comment(string path, int n_line, string comment)
 int write_variable(string path, string variable_name, string variable_value)
 {
     //path temp
-    string path_tmp = "." + path + "_tmp-file";
+    string path_tmp = path + "-tmp_file";
 
     ///Clone File
     if (clone_file(path, path_tmp) == -1)
