@@ -63,7 +63,7 @@ int write_comment(string path, int n_line, string comment)
     }
 
     //path temp
-    string path_tmp = "." + path + "_tmp-file";
+    string path_tmp = path + "-tmp_file";
 
     ///Clone File
     if (clone_file(path, path_tmp) == -1)
